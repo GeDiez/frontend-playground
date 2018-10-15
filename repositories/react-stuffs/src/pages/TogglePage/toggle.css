@@ -1,0 +1,30 @@
+.button-toggleable {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+}
+
+.button-toggleable > button {
+  min-width: 40px;
+  font-size: 14px;
+  background-color: transparent;
+  margin: 0;
+  padding: 7px 14px;
+  outline: none;
+}
+
+.button-toggleable > button:first-child.is-active {
+  background-color: green;
+}
+
+.button-toggleable > button:last-child.is-active {
+  background-color: lightcoral;
+}
+
+.button-toggleable > button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.button-toggleable > button:last-child {
+  border-radius: 0 6px 6px 0;
+}
