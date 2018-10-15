@@ -1,13 +1,13 @@
 {
-  "main.css": "/repositories/react-stuffs/build/static/css/main.20d542b8.chunk.css",
-  "main.js": "/repositories/react-stuffs/build/static/js/main.42e7a8c7.chunk.js",
-  "main.js.map": "/repositories/react-stuffs/build/static/js/main.42e7a8c7.chunk.js.map",
-  "static/js/1.f62ccb1f.chunk.js": "/repositories/react-stuffs/build/static/js/1.f62ccb1f.chunk.js",
-  "static/js/1.f62ccb1f.chunk.js.map": "/repositories/react-stuffs/build/static/js/1.f62ccb1f.chunk.js.map",
-  "runtime~main.js": "/repositories/react-stuffs/build/static/js/runtime~main.6c4f59c6.js",
-  "runtime~main.js.map": "/repositories/react-stuffs/build/static/js/runtime~main.6c4f59c6.js.map",
-  "static/css/main.20d542b8.chunk.css.map": "/repositories/react-stuffs/build/static/css/main.20d542b8.chunk.css.map",
-  "index.html": "/repositories/react-stuffs/build/index.html",
-  "precache-manifest.da8c9d31cd459bd768742a6eb22d30cf.js": "/repositories/react-stuffs/build/precache-manifest.da8c9d31cd459bd768742a6eb22d30cf.js",
-  "service-worker.js": "/repositories/react-stuffs/build/service-worker.js"
+  "main.css": "/frontend-playground/repositories/react-stuffs/build/static/css/main.20d542b8.chunk.css",
+  "main.js": "/frontend-playground/repositories/react-stuffs/build/static/js/main.38b461ab.chunk.js",
+  "main.js.map": "/frontend-playground/repositories/react-stuffs/build/static/js/main.38b461ab.chunk.js.map",
+  "static/js/1.f62ccb1f.chunk.js": "/frontend-playground/repositories/react-stuffs/build/static/js/1.f62ccb1f.chunk.js",
+  "static/js/1.f62ccb1f.chunk.js.map": "/frontend-playground/repositories/react-stuffs/build/static/js/1.f62ccb1f.chunk.js.map",
+  "runtime~main.js": "/frontend-playground/repositories/react-stuffs/build/static/js/runtime~main.f963b644.js",
+  "runtime~main.js.map": "/frontend-playground/repositories/react-stuffs/build/static/js/runtime~main.f963b644.js.map",
+  "static/css/main.20d542b8.chunk.css.map": "/frontend-playground/repositories/react-stuffs/build/static/css/main.20d542b8.chunk.css.map",
+  "index.html": "/frontend-playground/repositories/react-stuffs/build/index.html",
+  "precache-manifest.ba1e622ac6cab05386e2eee8422ea4ec.js": "/frontend-playground/repositories/react-stuffs/build/precache-manifest.ba1e622ac6cab05386e2eee8422ea4ec.js",
+  "service-worker.js": "/frontend-playground/repositories/react-stuffs/build/service-worker.js"
 }
