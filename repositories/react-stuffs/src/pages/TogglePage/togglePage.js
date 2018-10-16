@@ -21,10 +21,8 @@ export class TogglePage extends Component {
         <summary>
           Toggle is a sort of bahavior used in a lot of components like; modals, toggle buttons, tooltips, or where we have two options either true or false basically
         </summary>
-        <article>
-          <blockquote>
-            <pre className="lang-javascript prettyprint">
-                {`
+          <pre className="lang-javascript prettyprint">
+              {`
 class Toggle extends Component {
   constructor(props) {
     super(props);
@@ -58,9 +56,7 @@ class Toggle extends Component {
   }
 }
                 `}
-            </pre>
-          </blockquote>
-        </article>
+          </pre>
         <h2>Toggle button example</h2>
         <summary>
           In this case we can reuse the toggle behavior and make our component separatly

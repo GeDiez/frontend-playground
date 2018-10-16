@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/frontend-playground/repositories/react-stuffs/build/static/js/runtime~main.f963b644.js"
   },
   {
-    "revision": "38b461ab2535f1520167",
-    "url": "/frontend-playground/repositories/react-stuffs/build/static/js/main.38b461ab.chunk.js"
+    "revision": "67f70b9866be1efdfdd4",
+    "url": "/frontend-playground/repositories/react-stuffs/build/static/js/main.67f70b98.chunk.js"
   },
   {
     "revision": "f62ccb1fae512790eb27",
     "url": "/frontend-playground/repositories/react-stuffs/build/static/js/1.f62ccb1f.chunk.js"
   },
   {
-    "revision": "38b461ab2535f1520167",
-    "url": "/frontend-playground/repositories/react-stuffs/build/static/css/main.20d542b8.chunk.css"
+    "revision": "67f70b9866be1efdfdd4",
+    "url": "/frontend-playground/repositories/react-stuffs/build/static/css/main.fd2c9a41.chunk.css"
   },
   {
-    "revision": "6ef9cb39db5a4acf0108d78aceffbe74",
+    "revision": "bc00f27c784a6d42978b9c90775df6d7",
     "url": "/frontend-playground/repositories/react-stuffs/build/index.html"
   }
 ];

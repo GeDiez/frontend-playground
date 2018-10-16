@@ -93,11 +93,32 @@ menu > menuitem > menu > a {
   -moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.62);
 }
 
+@media(max-width: 576px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile::before {
+    height: 150px;
+  }
+
+  .profile > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 40px;
+  }
+}
+
 /*********************************************************/
 /* about me section */
 
 .aboutme {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #000000;
   margin-top: 30%;
   justify-content: center;
@@ -112,6 +133,12 @@ menu > menuitem > menu > a {
 .aboutme .social {
   width: 20px;
   margin: 0 15px
+}
+
+@media(max-width: 576px) {
+  .aboutme > summary {
+    text-align: center;
+  }
 }
 
 /*********************************************************/
@@ -133,7 +160,7 @@ menu > menuitem > menu > a {
 .projects .card {
   margin-bottom: 14px;
   padding-bottom: 14px;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .card {

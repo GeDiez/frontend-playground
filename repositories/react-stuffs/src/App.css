@@ -50,10 +50,19 @@ pre.prettyprint, code.prettyprint {
 }
 
 pre.prettyprint {
-	width: 95%;
+	width: 80%;
 	margin: 1em auto;
 	padding: 1em;
-	white-space: pre-wrap;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+  pre.prettyprint {
+    width: 100%;
+    border-radius: 0;
+    margin: 1em 0;
+  }
 }
 
 
