@@ -109,9 +109,9 @@ const validateSelection = ({selects, key, isSelect, keysSelected}) => {
       <Example2 />
     </div>
     <h3 className="subtitle is-5">API Reference</h3>
-    <Panel>
+    <Panel className="is-inline-block">
       <PanelHeading>API summary for render function</PanelHeading>
-      <PanelBlock isActive>
+      <PanelBlock>
         <table>
           <thead>
             <tr>
