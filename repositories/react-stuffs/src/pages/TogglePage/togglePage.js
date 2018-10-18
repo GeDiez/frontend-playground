@@ -5,12 +5,10 @@ import './toggle.css';
 import { Toggle } from '../../components';
 
 const ToggleButton = ({onClickOn, onClickOff, isActive}) => (
-
-    <div className="button-toggleable">
-      <button className={classname({'is-active': isActive})} onClick={onClickOn}>On</button>
-      <button className={classname({'is-active': !isActive})} onClick={onClickOff}>Off</button>
-    </div>
-
+  <div className="button-toggleable">
+    <button className={classname({'is-active': isActive})} onClick={onClickOn}>On</button>
+    <button className={classname({'is-active': !isActive})} onClick={onClickOff}>Off</button>
+  </div>
 )
 
 export class TogglePage extends Component {
@@ -67,6 +65,22 @@ class Toggle extends Component {
               <ToggleButton onClickOn={open} onClickOff={close} isActive={isOpen} />
             )}
           </Toggle>
+          <pre className="lang-javascript prettyprint">
+            {`
+    const ToggleButton = ({onClickOn, onClickOff, isActive}) => (
+      <div className="button-toggleable">
+        <button className={classname({'is-active': isActive})} onClick={onClickOn}>On</button>
+        <button className={classname({'is-active': !isActive})} onClick={onClickOff}>Off</button>
+      </div>
+    )
+
+    <Toggle isInitialOpen={false}>
+      {({isOpen, open, close}) => (
+        <ToggleButton onClickOn={open} onClickOff={close} isActive={isOpen} />
+      )}
+    </Toggle>
+            `}
+          </pre>
         </article>
       </div>
     );
