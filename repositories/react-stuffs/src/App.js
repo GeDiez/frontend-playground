@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import 'bulma/css/bulma.css';
 import './App.css';
 
 import { TogglePage, SelectorPage } from "./pages";
 
-const { location } = window;
-
-const Layout = ({match, ...rest}) => {
+const Layout = ({location}) => {
   const pages = {
     toggle: TogglePage,
     selector: SelectorPage,
   }
-  console.log(match, rest)
-  const Page = pages[match.params.page] || pages.toggle;
+
+  const paramPage = location.search.split('=')[1];
+  const Page = pages[paramPage] || pages.toggle;
 
   return (
     <div className="layout">
@@ -37,8 +36,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/:page" component={Layout}></Route>
-          <Redirect to={`/${location.search.split('=')[1]}`}></Redirect>
+          <Route path="/" component={Layout}></Route>
         </Switch>
       </Router>
     );
