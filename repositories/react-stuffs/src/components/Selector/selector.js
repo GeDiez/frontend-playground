@@ -5,62 +5,65 @@ export class Selector extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selects: props.initialList,
+      items: props.items,
     };
   }
 
-  editSelect = (key, isSelect) => {
-    const { selects } = this.state;
-    const { validate } = this.props;
-    const keysSelected = this.getKeysSelected();
+  updateItems = (key, isSelected) => {
+    const { items } = this.state;
+    const { beforeUpdate, onChange } = this.props;
+    const selectedItems = this.getSelectedItems();
+    const item = { ...items[key], isSelected };
     const newState = {
-      selects: validate({ selects, key, isSelect, keysSelected }),
+      items: beforeUpdate({ items, item, key, selectedItems }),
     };
 
-    this.setState(newState, () => this.props.onChange(newState));
+    this.setState(newState, () => onChange(newState));
   }
 
   toggle = key => {
-    this.editSelect(key, !this.state.selects[key].isSelect);
+    const { items } = this.state;
+    this.updateItems(key, !items[key].isSelected);
   }
 
   select = key => {
-    this.editSelect(key, true);
+    this.updateItems(key, true);
   };
 
   unselect = key => {
-    this.editSelect(key, false);
+    this.updateItems(key, false);
   };
 
-  getKeysSelected = () => {
-    const { selects } = this.state;
-    return Object.keys(selects).filter(key => selects[key].isSelect);
+  getSelectedItems = () => {
+    const { items } = this.state;
+    return Object.keys(items).filter(key => items[key].isSelected);
   }
 
   render() {
-    const { selects } = this.state;
+    const { items } = this.state;
     return this.props.children({
-      selects,
+      items,
       select: this.select,
       unselect: this.unselect,
       toggle: this.toggle,
+      selectedItems: this.getSelectedItems()
     });
   }
 }
 
 Selector.propTypes = {
   children: PropTypes.func.isRequired,
-  validate: PropTypes.func,
+  beforeUpdate: PropTypes.func,
   onChange: PropTypes.func,
   initialList: PropTypes.objectOf(PropTypes.shape({
-    isSelect: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
     //can receive any props else
     anyProp: () => true
   })).isRequired,
 };
 
 Selector.defaultProps = {
-  validate: (state) => state,
+  beforeUpdate: ({items, item, key}) => ({...items, [key]: item }),
   onChange: () => {},
   initialList: {},
 };

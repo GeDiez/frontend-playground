@@ -3,61 +3,60 @@ import { Tabs, Tab, TabList, TabLink } from 'bloomer';
 
 import { Selector } from '../../components';
 
-const validateSelection = ({selects, key, isSelect, keysSelected}) => {
-  const prevKeySelected = keysSelected[0];
-  return key !== prevKeySelected ? {
-    ...selects,
-    [key]: {...selects[key], isSelect},
-    [prevKeySelected]: {
-      ...selects[prevKeySelected],
-      isSelect: false
-    }
-  } : selects;
+const beforeUpdate = ({ items, key, item, selectedItems }) => {
+  const prevKey = selectedItems[0]
+  const prevItem = items[prevKey];
+
+  return prevKey !== key ? {
+    ...items,
+    [key]: item,
+    [prevKey]: {...prevItem, isSelected: false}
+  } : items;
 }
 
 export const Example = () => {
   const tabsItems = {
     tab1: {
-      isSelect: true,
+      isSelected: true,
       name: 'music',
     },
     tab2: {
-      isSelect: false,
+      isSelected: false,
       name: 'sports',
     },
     tab3: {
-      isSelect: false,
+      isSelected: false,
       name: 'hobbies',
     },
     tab4: {
-      isSelect: false,
+      isSelected: false,
       name: 'other things',
     }
   }
 
   return (
-    <Selector initialList={tabsItems} validate={validateSelection}>
-      {({selects, select}) => (
+    <Selector items={tabsItems} beforeUpdate={beforeUpdate}>
+      {({items, select}) => (
         <Tabs>
           <TabList>
-            <Tab isActive={selects.tab1.isSelect}>
+            <Tab isActive={items.tab1.isSelected}>
               <TabLink onClick={() => select('tab1')}>
-                <span>{selects.tab1.name}</span>
+                <span>{items.tab1.name}</span>
               </TabLink>
             </Tab>
-            <Tab isActive={selects.tab2.isSelect}>
+            <Tab isActive={items.tab2.isSelected}>
               <TabLink onClick={() => select('tab2')}>
-                <span>{selects.tab2.name}</span>
+                <span>{items.tab2.name}</span>
               </TabLink>
             </Tab>
-            <Tab isActive={selects.tab3.isSelect}>
+            <Tab isActive={items.tab3.isSelected}>
               <TabLink onClick={() => select('tab3')}>
-                  <span>{selects.tab3.name}</span>
+                  <span>{items.tab3.name}</span>
               </TabLink>
             </Tab>
-            <Tab isActive={selects.tab4.isSelect}>
+            <Tab isActive={items.tab4.isSelected}>
               <TabLink onClick={() => select('tab4')}>
-                <span>{selects.tab4.name}</span>
+                <span>{items.tab4.name}</span>
               </TabLink>
             </Tab>
           </TabList>
